@@ -1,0 +1,118 @@
+/*
+File: style.css
+GUI Assignment 5: Implementing a Bit of Scrabble with Drag-and-Drop
+Tim Truong, UMass Lowell Computer Science, tim_truong1@student.uml.edu
+Copyright (c) 2022 by Tim Truong. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Updated on 6/29/22 at 10:30pm.
+Instructor: Professor Wenjin Zhou
+Sources of Help: W3Schools and Stackoverflow
+Brief Overview: The site is all about implementing a lite version of the
+family game called Scrabble where instead of having multiple line tiles for people to fill out after
+they implement their first legal word, they only have to create a only one word based on the tiles they were
+randomly given instead of continually trying to form words after their original.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background: url("../images/rainforest.jpg") no-repeat;
+    background-size: cover;
+}
+
+h1, footer {
+    text-align: center;
+    color: azure;
+}
+
+#scrabble-board {
+    margin-top: 4.5%;
+}
+
+#Scrabble_BoardLine {
+    width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    margin: 0 auto;
+}
+
+/* Added a border to show the user where the drop targets are if they are using
+a device smaller than laptops, did not had time to made it fully responsive */
+td {
+    border: 5px solid black;
+}
+
+/* Made the drop tiles a set width and made them centered so that it would
+be responsive for at least for laptop/computer devices */
+.drop-tiles {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: -75px;
+}
+
+.drop_letter {
+    width: 5.3vw;
+    height: 75px;
+
+}
+
+#tiles-slots {
+    margin: 0 auto;
+    width: 500px;
+    /* margin-top: -75px; */
+}
+
+/* Made the board tiles and tile holder a set width and made them centered so that it would
+be responsive for at least for laptop/computer devices */
+.board_tiles {
+    position: relative;
+    width: 70px;
+    height: 60px;
+    top: -80px;
+}
+
+#Scrabble_Tile_Holder {
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 600px;
+}
+
+/* Added margin top to make the letter last played to be visible and same thing goes for the score board as well */
+#letter-container {
+    background: linear-gradient(#44e63e, #edff08);
+    border: 2px solid #44e63e;
+    text-align: center;
+    float: right;
+    color: rgb(24, 22, 22);
+    margin-right: 50px;
+    margin-top: 100px;
+    float: right;
+}
+
+#display-score, #score-num, #display-curr-score, #curr-score-num,
+#display-tile-amount, #tile-num {
+    color: azure;
+}
+
+#score-board-container {
+    margin-top: 100px;
+}
+
+/* Added a linear gradient to match the background image */
+button {
+    background: linear-gradient(#44e63e, #edff08);
+    cursor: pointer;
+    border-radius: 20%;
+    border-color: #44e63e;
+}
