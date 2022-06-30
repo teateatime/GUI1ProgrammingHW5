@@ -4,7 +4,7 @@ GUI Assignment 5: Implementing a Bit of Scrabble with Drag-and-Drop
 Tim Truong, UMass Lowell Computer Science, tim_truong1@student.uml.edu
 Copyright (c) 2022 by Tim Truong. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-Updated on 6/29/22 at 10:30pm.
+Updated on 6/29/22 at 11:35pm.
 Instructor: Professor Wenjin Zhou
 Sources of Help: W3Schools and Stackoverflow
 Brief Overview: The site is all about implementing a lite version of the
@@ -111,7 +111,9 @@ function dragTiles() {
 function dropTiles() {
     $(".drop_letter").droppable({
         drop: function (e, ui) {
-            // $(this).droppable('option', 'accept', ui.draggable);
+            // Credit to this stackoverflow link
+            // -> https://stackoverflow.com/questions/3948447/jquery-ui-droppable-only-accept-one-draggable
+            $(this).droppable('option', 'accept', ui.draggable);
             // Makes drop target take only one drag target
             if ($(this).hasClass('drop_letter')) {
                 // Credit to this stackoverflow link on helping get id for draggable
@@ -314,7 +316,7 @@ function ContinueOn() {
     console.log(score);
 
     $("#tiles-slots").html(display_tiles);
-
+    generate_scrabble_row();
     dragTiles();
     dropTiles();
 }
