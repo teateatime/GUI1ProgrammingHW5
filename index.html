@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+GUI Assignment 5: Implementing a Bit of Scrabble with Drag-and-Drop
+Tim Truong, UMass Lowell Computer Science, tim_truong1@student.uml.edu
+Copyright (c) 2022 by Tim Truong. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Updated on 6/29/22 at 10:30pm.
+Instructor: Professor Wenjin Zhou
+Sources of Help: W3Schools and Stackoverflow
+Brief Overview: The site is all about implementing a lite version of the
+family game called Scrabble where instead of having multiple line tiles for people to fill out after
+they implement their first legal word, they only have to create a only one word based on the tiles they were
+randomly given instead of continually trying to form words after their original.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble by Tim Truong</title>
+    <!---CSS link-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>Scuffed Lite Version of Scrabble</h1>
+    <!-- Container for all the whole game board -->
+    <div id="game-container">
+        <div id="scrabble-board">
+            <span><img src="images/Scrabble_Board_OneLine.png" alt="Scrabble_Board_Holder" id="Scrabble_BoardLine"></span>
+            <!-- Where all the drop targets are appended -->
+            <div class="drop-tiles"></div>
+        </div>
+        <div id="tile-container">
+            <span><img src="images/Scrabble_Tile_Holder.png" alt="tile_holder" id="Scrabble_Tile_Holder"></span>
+            <!-- Where all the new or added tiles go -->
+            <div id="tiles-slots"></div>
+        </div>
+        <div id="letter-container">
+            <!-- Where the last letter was played is displayed at -->
+            <div id="letters-played"></div>
+            <div id="msg"></div>
+        </div>
+        <div id="score-board-container">
+            <!-- Score Board -->
+            <span id="display-score">Total Score: </span><span id="score-num"></span>
+            <br>
+            <span id="display-curr-score">Current Word Score: </span><span id="curr-score-num"></span>
+            <br>
+            <span id="display-tile-amount">Tiles Remaining: </span><span id="tile-num"></span>
+        </div>
+        <!-- New Game Button -->
+        <button type="button" onclick="restart()">Restart</button>
+        <button type="button" onclick="ContinueOn()">Submit Word</button>
+    </div>
+
+    <footer>Copyright &copy Tim Truong</footer>
+
+    <!--Javascript links-->
+    <!--jQuery Stuff -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Added jQuery UI Plugin to enable drag and drop functionality within the site-->
+    <link href=" https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
