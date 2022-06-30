@@ -73,6 +73,8 @@ Other Stuff
 One other issue is that when the user puts in more than one tile at the same drop_tile, the last tile is not reverted back to its original position and the drop tile still accepts it.
 (Currently being worked on)
 
+Tried to implement word validation but also failed so I made a lite version of it in script.js
+
 https://teateatime.github.io/GUI1ProgrammingHW5/
 
 https://github.com/teateatime/GUI1ProgrammingHW5
